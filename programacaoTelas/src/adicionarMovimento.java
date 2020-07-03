@@ -1,7 +1,5 @@
-
 import java.util.LinkedList;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
 
 public class adicionarMovimento extends javax.swing.JFrame {
 
@@ -39,6 +37,7 @@ public class adicionarMovimento extends javax.swing.JFrame {
         jLabelCodigo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabelCodigo.setText("Código:");
 
+        jTextFieldCodigo.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextFieldCodigo.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 jTextFieldCodigoFocusLost(evt);
@@ -52,11 +51,14 @@ public class adicionarMovimento extends javax.swing.JFrame {
         jLabelDescricao.setText("Descrição:");
 
         jTextAreaDescricao.setColumns(20);
+        jTextAreaDescricao.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextAreaDescricao.setRows(5);
         jScrollPane1.setViewportView(jTextAreaDescricao);
 
         jLabelValor.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabelValor.setText("Valor:");
+
+        jTextFieldValor.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         jButtonAdicionar.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jButtonAdicionar.setText("Adicionar");
@@ -74,6 +76,7 @@ public class adicionarMovimento extends javax.swing.JFrame {
             }
         });
 
+        jTextFieldMovimento.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jTextFieldMovimento.setFocusable(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -91,9 +94,8 @@ public class adicionarMovimento extends javax.swing.JFrame {
                             .addComponent(jLabelAdicionarMovimento, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabelMovimento)
                             .addComponent(jLabelDescricao)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabelCodigo)
-                                .addComponent(jTextFieldCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(jLabelCodigo)
+                            .addComponent(jTextFieldCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButtonAdicionar, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)

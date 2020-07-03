@@ -1,6 +1,7 @@
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
 
@@ -26,6 +27,21 @@ public class CRUD {
             System.out.println("e: " + e);
             JOptionPane.showMessageDialog(null, e);           
         }
+    }
+    
+    ResultSet getPedidos() throws SQLException {
+        try {
+            connect();
+            stmt = c.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM `Pedidos`"); 
+           
+            return rs;
+            
+        } catch (Exception e) {
+            System.out.println("e: " + e);
+            JOptionPane.showMessageDialog(null, e);           
+        } 
+        return null;
     }
 
     int[] addFinanca(String codigo, String movimento, String descricao, float valor) {
